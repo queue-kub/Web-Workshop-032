@@ -7,10 +7,16 @@
     <meta name="descripttion" content="เว็บไซต์สำหรับแนะนำการใช้งาน html css และ workshop">
     <title>Web Workshop : 684259032</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 20px;
+            margin: 30px;
             padding: 10px;
+            background-color: #ffffe0;
+
+            line-height: 1.5;
         }
 
         h1 {
@@ -30,12 +36,29 @@
             border-left: 3px solid rgb(133, 133, 253);
             padding: 10px;
             font-size: 18px;
+
+
+            white-space: pre-wrap;
+            border-radius: 10px;
+        }
+        a {
+            text-decoration: none;
+            color:rgb(0, 0, 0)
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: rgb(243, 141, 39)
+        }
+
+        .text-center {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>HTML Tutorial</h1>
+    <h1 id="top">HTML Tutorial</h1>
     <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
     <h2 style="color: rgb(132, 0, 255);">Topics</h2>
     <ul>
@@ -49,7 +72,6 @@
         <li><a href="#Adding Images">Adding Images</a></li>
         <li><a href="#Creating Tables">Creating Tables</a></li>
         <li><a href="#HTML Forms">HTML Forms</a></li>
-        <li><a href="#Embedding Multimedia (Audio & Video)">Embedding Multimedia (Audio & Video)</a></li>
         <li><a href="#Semantic HTML">Semantic HTML</a></li>
         <li><a href="#Workshop">Workshop</a></li>
     </ul>
@@ -69,13 +91,13 @@
     - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
     - HTML is not a programming language, but a markup language</pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- HTML Document Structure -->
     <h2 id="HTML Document Structure" color: rgb(132, 0, 255);>HTML Document Structure</h2>
+    <p>AN HTML DOCUMENT HAS THE FOLLOWING BASIC STRUCTURE...</p>
     <pre>
-    An HTML document has the following basic structure...
     คำอธิบาย:
     &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
     &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
@@ -91,14 +113,14 @@
     &lt;img src="image.jpg" alt="A description of the image"&gt;
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Heading -->
     <h2 id="Heading" color: rgb(132, 0, 255);>Heading</h2>
+    <p><a href="w03-heading.html">workshop</a></p>
+    <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
     <pre>
-    workshop
-    HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...
         - &lt;h1&gt;: Heading 1
         - &lt;h2&gt;: Heading 2
         - &lt;h3&gt;: Heading 3
@@ -107,25 +129,25 @@
         - &lt;h6&gt;: Heading 6
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Paragraph -->
     <h2 id="Paragraph" color: rgb(132, 0, 255);>Paragraph</h2>
+    <p>work shop</p>
+    <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
     <pre>
-    workshop
-    HTML paragraphs are defined with the &lt;p&gt; tag...
     - &lt;p&gt;: Paragraph
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Text Formatting -->
     <h2 id="Text Formatting" color: rgb(132, 0, 255);>Text Formatting</h2>
+    <p>workshop</p>
+    <p>HTML provides various elements to format text...</p>
     <pre>
-    workshop
-    HTML provides various elements to format text...
     - &lt;h1&gt; to &lt;h6&gt;: Headings
     - &lt;p&gt;: Paragraph
     - &lt;pre&gt;: Preformatted text
@@ -149,14 +171,14 @@
     - &lt;code&gt;: Code snippet
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Creating Links -->
     <h2 id="Creating Links" color: rgb(132, 0, 255);>Creating Links</h2>
+    <p>workshop</p>
+    <p>HTML links are defined with the &lt;a&gt; tag...</p>
     <pre>
-    workshop
-    HTML links are defined with the <a> tag...
         - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
         - The href attribute specifies the URL of the page the link goes to
         - The target attribute specifies where to open the linked document
@@ -178,14 +200,14 @@
         - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Lists (Ordered and Unordered) -->
     <h2 id="Lists (Ordered and Unordered)" color: rgb(132, 0, 255);>Lists (Ordered and Unordered)</h2>
+    <p>workshop</p>
+    <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
     <pre>
-    workshop
-    HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
     - &lt;ul&gt;: Unordered list
     - &lt;ol&gt;: Ordered list
     - &lt;li&gt;: List item
@@ -228,14 +250,14 @@
 
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Adding Images -->
     <h2 id="Adding Images" color: rgb(132, 0, 255);>Adding Images</h2>
+    <p>workshop</p>
+    <p>HTML images are defined with the &lt;img&gt; tag...</p>
     <pre>
-    workshop
-    HTML images are defined with the &lt;img&gt; tag...
     - &lt;img src="url" alt="description"&gt;
     - The src attribute specifies the URL of the image
     - The alt attribute provides a description of the image
@@ -276,28 +298,28 @@
     }
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Creating Tables -->
     <h2 id="Creating Tables" color: rgb(132, 0, 255);>Creating Tables</h2>
+    <p>Workshop 1</p>
+    <p>Workshop 2</p>
+    <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
     <pre>
-    Workshop 1
-    Workshop 2
-    HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...
     - &lt;table&gt;: Table
     - &lt;tr&gt;: Table row
     - &lt;th&gt;: Table header
     - &lt;td&gt;: Table data/cell
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- HTML Forms -->
     <h2 id="HTML Forms" color: rgb(132, 0, 255);>HTML Forms</h2>
+    <p>HTML forms are defined with the &lt;form&gt; tag...</p>
     <pre>
-    HTML forms are defined with the &lt;form&gt; tag...
     หัวข ้อเกี่ยวกับฟอร์ม
     1. โครงสร้างพื้นฐานของฟอร์ม
     - &lt;form>: ใชเ้ป็นตวัครอบขอ้มูลในฟอรม์
@@ -330,22 +352,13 @@
     - การใช ้JavaScript (เชน่ onsubmit)
     </pre>
 
-    <a href="">back to top</a>
-
-
-    <!-- Embedding Multimedia (Audio & Video) -->
-    <h2 id="Embedding Multimedia (Audio & Video)" color: rgb(132, 0, 255);>Embedding Multimedia (Audio & Video)</h2>
-    <pre>
-
-    </pre>
-
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Semantic HTML -->
     <h2 id="Semantic HTML" color: rgb(132, 0, 255);>Semantic HTML</h2>
+    <p>Semantic HTML elements clearly define the content of a web page...</p>
     <pre>
-    Semantic HTML elements clearly define the content of a web page...
     - &lt;header&gt;: Defines a header for a document or section
     - &lt;nav&gt;: Defines navigation links
     - &lt;section&gt;: Defines a section in a document
@@ -355,17 +368,25 @@
 
     </pre>
 
-    <a href="">back to top</a>
+    <a href="#top">back to top</a>
 
 
     <!-- Workshop -->
     <h2 id="Workshop" color: rgb(132, 0, 255);>Workshop</h2>
-    <pre>
+    
+        <ul>
+            <li><a href="">workshop 01 : ...</a></li>
+            <li><a href="">workshop 02 : ...</a></li>
+        </ul>
+    
 
-    </pre>
+    <a href="#top">back to top</a>
 
-    <a href="">back to top</a>
-
+    <hr>
+    <div class="text-center">
+        <a href="https://www.w3schools.com/">Learn more about HTML</a>
+        <p> &copy; 2026 HTML Tutorial by Sittichok Samsee</p>
+    </div>
 
 </body>
 
