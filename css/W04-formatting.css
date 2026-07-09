@@ -67,3 +67,14 @@ nav a:hover {
 
   background-color:  #E8F5E9;
 }
+
+.b-label      { background-color: #007bff; }
+.strong-label { background-color: #00bfa5; }
+.i-label      { background-color: #00bfa5; }
+.em-label     { background-color: #28c76f; }
+.u-label      { background-color: #f39c12; }
+.mark-label   { background-color: #f39c12; }
+.small-label  { background-color: #8e44ad; }
+.del-label    { background-color: #ea5455; }
+.sup-label    { background-color: #8e44ad; }
+.sub-label    { background-color: #438afe; }
