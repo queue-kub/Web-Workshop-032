@@ -10,10 +10,10 @@ body {
 
   line-height: 1.4;
 }
- 
+
 footer,
-.hero,
-.card,
+/* .hero, */
+/* .card, */
 .tip-box {
   border: 1px solid red;
   background-color: white;
@@ -21,6 +21,9 @@ footer,
   padding: 20px;
 }
 
+/* ======================
+Header / Navigation 
+=========================*/
 header {
   background: linear-gradient(to right, #014ff8, #15bafc);
   padding: 20px;
@@ -38,9 +41,13 @@ header {
   gap: 10px;
 }
 
-.brand-icon {font-size: 50px;}
+.brand-icon {
+  font-size: 50px;
+}
 
-.brand-text p {font-size: 12px;}
+.brand-text p {
+  font-size: 12px;
+}
 
 nav a {
   color: white;
@@ -52,29 +59,161 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* ======================
+       Hero Section
+=========================*/
+
+.hero {
+  padding: 45px 80px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-icon {
+  /* background-color: #014ff8; */
+  background: linear-gradient(135deg, #014ff8, #15bafc);
+  padding: 20px;
+  border-radius: 20%;
+  
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.hero-text {
+  
+}
+.hero-text h1 {
+  color: rgb(0, 0, 143);
+  font-size: 40px;
+}
+.hero-text p {
+  color: gray;
+  font-size: 20px;
+}
+
+
+/* ======================
+      Main Section
+=========================*/
 .container {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
   padding: 30px;
 
-  background-color: #A5D6A7;
+  background-color: #a5d6a7;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
 
-  background-color:  #E8F5E9;
+  background-color: #e8f5e9;
+
+  gap: 30px;
 }
 
-.b-label      { background-color: #007bff; }
-.strong-label { background-color: #00bfa5; }
-.i-label      { background-color: #00bfa5; }
-.em-label     { background-color: #28c76f; }
-.u-label      { background-color: #f39c12; }
-.mark-label   { background-color: #f39c12; }
-.small-label  { background-color: #8e44ad; }
-.del-label    { background-color: #ea5455; }
-.sup-label    { background-color: #8e44ad; }
-.sub-label    { background-color: #438afe; }
+.card {
+  background-color: white;
+  /* padding: 40px 30px 60px; */
+
+  border-radius: 20px;
+  border: 1px solid rgb(198, 205, 230);
+  
+  overflow: hidden; /*ซ่อนที่มันล้นออกมา*/
+
+  box-shadow: 0 2px 5px black;
+
+}
+
+.card-header {
+  background-color: #dfebf8;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 20px;
+
+  padding: 20px;
+}
+
+.card-header-icon {
+  color: white;
+  background-color: #007bff;
+  border-radius: 50px;
+
+  font-size: 30px;
+  padding: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.format-row {
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(220,220,220);
+
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+}
+
+.label {
+  /* background-color: rgb(128, 228, 241); */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+.b-label {background-color: #007bff;}
+.strong-label {background-color: #00bfa5;}
+.i-label {background-color: #00bfa5;}
+.em-label {background-color: #28c76f;}
+.u-label {background-color: #f39c12;}
+.mark-label {background-color: #f39c12;}
+.small-label {background-color: #8e44ad;}
+.del-label {background-color: #ea5455;}
+.sup-label {background-color: #8e44ad;}
+.sub-label {background-color: #438afe;}
+
+/* Card-2 */
+.code-box {
+  background-color: black;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+pre {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+}
+
+.line-no {
+  color: rgb(145, 139, 139);
+
+  display: inline-block;
+  width: 30px;
+}
+
+.html-tag { color:#ff0000}
+
+/* card 2 */
+.purple-text {
+  color: purple;
+}
+
+.html-tag {
+    color: #ff4d4f; /
+    font-weight: 600;
+}
+
+.line-no {
+    color: #9ca3af;
+}
+
