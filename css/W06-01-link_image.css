@@ -67,7 +67,7 @@ body {
 .nav-list {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -92,6 +92,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 390px;
   padding: 20px 22px 0px;
+  gap: 25px;
 }
 /* ===== Left-content ===== */
 .left-content {
@@ -143,17 +144,29 @@ body {
 
 /* link example */
 .card {
-  border: 1px solid rgb(212, 28, 28);
-  padding: 15px;
-  margin: 15px;
+  /* ลบ border สีแดงออก แล้วใส่สไตล์ด้านล่างแทน */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* เงาบางๆ ให้กล่องดูลอยขึ้นมา */
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0; /* เส้นขอบสีเทาอ่อนมากๆ */
 }
 
 .card-header-title {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   display: flex;
-  gap: 8px;
+  gap: 12px;
   align-items: center;
-  color: rgb(3, 3, 3);
+  color: #1e3a8a; /* ตัวอักษรสีน้ำเงินเข้ม */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9; /* เส้นคั่นด้านล่างหัวข้อ */
+  padding-bottom: 12px;
+}
+
+.card-header-title h2 {
+  font-size: 22px;
+  margin: 0;
 }
 
 .card-body-grid {
@@ -171,14 +184,13 @@ body {
 }
 
 .result-panel {
-  border: 1px solid rgb(224, 6, 42);
+  border: 1px solid #cbd5e1; /* สีเส้นขอบเทาอมฟ้า */
   border-radius: 10px;
-  /* padding: 10px; */
   overflow: hidden;
 }
 
 .code-panel {
-  border: 1px solid rgb(224, 6, 42);
+  border: 1px solid #cbd5e1;
   border-radius: 10px;
   /* padding: 10px; */
   overflow: hidden;
@@ -186,8 +198,11 @@ body {
 }
 
 .result-penal-title {
-  background-color: rgb(185, 238, 238);
-  padding: 6px 15px;
+  background-color: #e0e7ff; /* สีพื้นหลังฟ้าอ่อนละมุนๆ */
+  color: #3730a3; /* สีตัวอักษรน้ำเงินเข้ม */
+  padding: 10px 15px;
+  font-weight: 600; /* ทำให้ตัวหนังสือหนาขึ้นนิดนึง */
+  border-bottom: 1px solid #cbd5e1; /* เพิ่มเส้นคั่นด้านล่างบางๆ */
 }
 
 .result-panel-body {
@@ -229,27 +244,48 @@ body {
 }
 
 .code-list {
-  color: wheat;
-  padding: 10px 50px;
+  color: #ffffff; /* เปลี่ยนข้อความธรรมดาเป็นสีขาวให้อ่านง่าย */
+  padding: 10px 20px 10px 40px; /* ปรับระยะขอบให้พอดีขึ้น */
 }
+
 .code-list li {
-  padding: 5px 20px;
+  padding: 5px 0px; 
 }
 
 .tag {
-  color: red;
+  color: #ff6b6b; /* แท็ก: สีแดงอมชมพูสว่าง */
 }
+
 .attr {
-  color: green;
+  color: #4ade80; /* Attribute: สีเขียวพาสเทลสว่าง */
 }
+
 .value {
-  color: greenyellow;
+  color: #fde047; /* Value (ในฟันหนู): สีเหลืองสว่าง */
 }
 
 .result-panel-body-3g {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+  padding: 20px;
+  align-items: flex-end;
+  justify-items: center;
+}
+
+/* ส่วนของ figure และ img ยังคงใช้เหมือนเดิมครับ */
+.result-panel-body-3g figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.result-panel-body-3g img {
+  max-width: 100%; 
+  height: auto;
+  object-fit: contain;
 }
 
 figcaption {
@@ -261,4 +297,82 @@ figcaption {
   border: 1px solid red;
   padding: 15px;
   margin: 15px;
+}
+
+/* สไตล์กล่องด้านข้าง (side-card) */
+.side-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0; /* สีเส้นขอบอ่อนๆ */
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* เงาบางๆ */
+    margin-bottom: 20px;
+    align-self: start;
+
+}
+
+/* ส่วนหัวของกล่อง */
+.side-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.side-card-header .icon-target {
+    font-size: 28px;
+}
+
+.side-card-header h3 {
+    color: #1e3a8a; /* สีน้ำเงินเข้มตามภาพ */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* รายการจุดประสงค์ */
+.objective-list {
+    list-style: none; /* เอาจุด bullet เริ่มต้นออก */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* ระยะห่างระหว่างแต่ละข้อ */
+}
+
+.objective-list li {
+    display: flex;
+    align-items: flex-start; /* ให้เลขกับข้อความอยู่ระดับเดียวกันด้านบน */
+    gap: 12px;
+}
+
+/* สไตล์วงกลมตัวเลข */
+.list-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b82f6; /* สีน้ำเงินของวงกลม */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%; /* ทำเป็นวงกลม */
+    flex-shrink: 0; /* ป้องกันไม่ให้วงกลมหดตัวเมื่อข้อความยาว */
+    margin-top: 2px;
+}
+
+.objective-list p {
+    margin: 0;
+    color: #334155; /* สีข้อความเทาเข้ม */
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.objective-list code {
+    background-color: #f1f5f9; /* ไฮไลท์แท็ก HTML เล็กน้อย */
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f172a;
+    font-family: monospace;
 }
