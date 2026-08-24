@@ -92,7 +92,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 390px;
   padding: 20px 22px 0px;
-  gap: 25px;
+  gap: 15px;
 }
 /* ===== Left-content ===== */
 .left-content {
@@ -178,9 +178,11 @@ body {
 
 /* ===== right-content ===== */
 .right-sidebar {
-  border: 1px solid rgb(221, 4, 210);
+  /*border: 1px solid rgb(221, 4, 210);
   padding: 15px;
-  margin: 15px;
+  margin: 15px;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .result-panel {
@@ -249,7 +251,7 @@ body {
 }
 
 .code-list li {
-  padding: 5px 0px; 
+  padding: 5px 0px;
 }
 
 .tag {
@@ -266,7 +268,7 @@ body {
 
 .result-panel-body-3g {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   padding: 20px;
   align-items: flex-end;
@@ -283,7 +285,7 @@ body {
 }
 
 .result-panel-body-3g img {
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -301,78 +303,313 @@ figcaption {
 
 /* สไตล์กล่องด้านข้าง (side-card) */
 .side-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0; /* สีเส้นขอบอ่อนๆ */
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* เงาบางๆ */
-    margin-bottom: 20px;
-    align-self: start;
-
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* สีเส้นขอบอ่อนๆ */
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* เงาบางๆ */
+  margin-bottom: 20px;
 }
 
 /* ส่วนหัวของกล่อง */
 .side-card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .side-card-header .icon-target {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .side-card-header h3 {
-    color: #1e3a8a; /* สีน้ำเงินเข้มตามภาพ */
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
+  color: #1e3a8a; /* สีน้ำเงินเข้มตามภาพ */
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* รายการจุดประสงค์ */
 .objective-list {
-    list-style: none; /* เอาจุด bullet เริ่มต้นออก */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* ระยะห่างระหว่างแต่ละข้อ */
+  list-style: none; /* เอาจุด bullet เริ่มต้นออก */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* ระยะห่างระหว่างแต่ละข้อ */
 }
 
 .objective-list li {
-    display: flex;
-    align-items: flex-start; /* ให้เลขกับข้อความอยู่ระดับเดียวกันด้านบน */
-    gap: 12px;
+  display: flex;
+  align-items: flex-start; /* ให้เลขกับข้อความอยู่ระดับเดียวกันด้านบน */
+  gap: 12px;
 }
 
 /* สไตล์วงกลมตัวเลข */
 .list-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3b82f6; /* สีน้ำเงินของวงกลม */
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%; /* ทำเป็นวงกลม */
-    flex-shrink: 0; /* ป้องกันไม่ให้วงกลมหดตัวเมื่อข้อความยาว */
-    margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b82f6; /* สีน้ำเงินของวงกลม */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%; /* ทำเป็นวงกลม */
+  flex-shrink: 0; /* ป้องกันไม่ให้วงกลมหดตัวเมื่อข้อความยาว */
+  margin-top: 2px;
 }
 
 .objective-list p {
-    margin: 0;
-    color: #334155; /* สีข้อความเทาเข้ม */
-    line-height: 1.5;
-    font-size: 15px;
+  margin: 0;
+  color: #334155; /* สีข้อความเทาเข้ม */
+  line-height: 1.5;
+  font-size: 15px;
 }
 
 .objective-list code {
-    background-color: #f1f5f9; /* ไฮไลท์แท็ก HTML เล็กน้อย */
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #0f172a;
-    font-family: monospace;
+  background-color: #f1f5f9; /* ไฮไลท์แท็ก HTML เล็กน้อย */
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #0f172a;
+  font-family: monospace;
+}
+/*===================================
+ tag Mene                
+=======================================*/
+.tag-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.tag-menu span {
+  /* ลบ border: 1px solid red; และ background-color ออก */
+  border-radius: 30px;
+  padding: 8px 6px; /* แก้ไขตัว d ที่เกินมา */
+  text-align: center;
+  font-weight: 500; /* เพิ่มความหนาของตัวอักษรนิดนึงให้เหมือนในภาพ */
+}
+
+/* กำหนดสีแยกแต่ละปุ่มด้วย nth-child (พื้นหลังสีอ่อน, ตัวอักษรสีเข้ม) */
+
+/* 1. <a> - สีฟ้า */
+.tag-menu span:nth-child(1) {
+  background-color: #e0f2fe; 
+  color: #0284c7; 
+}
+
+/* 2. href - สีฟ้าอมเขียว (Cyan) */
+.tag-menu span:nth-child(2) {
+  background-color: #cffafe; 
+  color: #0891b2; 
+}
+
+/* 3. target - สีเขียว */
+.tag-menu span:nth-child(3) {
+  background-color: #dcfce7; 
+  color: #16a34a; 
+}
+
+/* 4. <img> - สีส้มอมพีช */
+.tag-menu span:nth-child(4) {
+  background-color: #ffedd5; 
+  color: #ea580c; 
+}
+
+/* 5. src - สีม่วง */
+.tag-menu span:nth-child(5) {
+  background-color: #f3e8ff; 
+  color: #9333ea; 
+}
+
+/* 6. alt - สีชมพู */
+.tag-menu span:nth-child(6) {
+  background-color: #fce7f3; 
+  color: #db2777; 
+}
+
+/* 7. width - สีมิ้นต์ (Teal) */
+.tag-menu span:nth-child(7) {
+  background-color: #ccfbf1; 
+  color: #0d9488; 
+}
+
+/* 8. height - สีเหลืองทอง */
+.tag-menu span:nth-child(8) {
+  background-color: #fef3c7; 
+  color: #d97706; 
+}
+
+/* =========================================
+   กิจกรรมฝึกปฏิบัติ (Activity List)
+========================================= */
+.activity-list li:nth-child(1) .list-number {
+  background-color: #3b82f6; 
+}
+.activity-list li:nth-child(2) .list-number {
+  background-color: #22c55e; 
+}
+.activity-list li:nth-child(3) .list-number {
+  background-color: #f59e0b; 
+}
+.activity-list li:nth-child(4) .list-number {
+  background-color: #8b5cf6; 
+}
+.activity-list li:nth-child(5) .list-number {
+  background-color: #ec4899; 
+}
+.activity-list li:nth-child(6) .list-number {
+  background-color: #14b8a6; 
+}
+
+/*===========================
+submit
+============================*/
+.submit-card {
+  background-color: #fef3c7;
+  border-color: #16a34a;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon-plane{
+ font-size: 30px;
+}
+
+/* =========================================
+   ส่วนท้าย: เกร็ดความรู้ (Tip Box)
+========================================= */
+
+/* โครงสร้างกล่องหลัก */
+.tip-box {
+    display: flex;
+    align-items: center; /* จัดให้เนื้อหาทุกส่วนอยู่กึ่งกลางแนวตั้ง */
+    gap: 24px;
+    background-color: #f4f8ff; /* สีพื้นหลังฟ้าอ่อน */
+    border: 1px solid #bfdbfe; /* สีเส้นขอบฟ้าอ่อน */
+    border-radius: 12px;
+    padding: 24px 30px;
+    margin-top: 20px;
+}
+
+/* ไอคอนตัว i ด้านซ้าย */
+.info-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b82f6; /* สีน้ำเงิน */
+    color: white;
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif; /* ใช้ฟอนต์มีหัวให้เหมือนในรูป */
+    font-weight: bold;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    flex-shrink: 0; /* ป้องกันไม่ให้วงกลมหดตัว */
+}
+
+/* ส่วนเนื้อหาตรงกลาง */
+.tip-content {
+    flex-grow: 1; /* สั่งให้กล่องข้อความขยายเต็มพื้นที่ที่เหลือ */
+}
+
+.tip-content h2 {
+    color: #1e3a8a; /* สีน้ำเงินเข้ม */
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.tip-content p {
+    color: #334155; /* สีข้อความเทาเข้ม */
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* เน้นคำ (แท็ก span ที่อยู่ใน p) ให้เป็นสีแดง */
+.tip-content p span {
+    color: #e11d48; /* สีแดง */
+    font-family: monospace; /* เปลี่ยนฟอนต์ให้ดูเหมือนโค้ด */
+    font-weight: 500;
+}
+
+/* ไอคอนอีโมจิด้านขวา */
+.tip-photo {
+    display: flex;
+    flex-direction: column; /* เรียงจากบนลงล่าง */
+    gap: 15px;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.bulb {
+  font-size: 52px;
+}
+
+.book {
+  font-size: 44px;
+  margin: 8px;
+}
+
+/*==========================
+          Responsive
+===========================*/
+@media (max-width: 1200px) {
+  
+
+  .nav-list {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr; 
+  }
+
+  .right-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: stretch; 
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .site-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* จัดเนื้อหาให้อยู่กึ่งกลาง */
+    text-align: center;
+    width: 100%; /* บังคับให้พื้นหลังกว้างเต็มจอเสมอ */
+  }
+
+  .right-sidebar {
+    display: grid;
+    grid-template-columns: 1fr; 
+  }
+  
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tip-photo {
+    display: none;
+  }
+
+  .tip-box {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .site-header, .main-layout, .hero, .left-content, .right-sidebar {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
 }
