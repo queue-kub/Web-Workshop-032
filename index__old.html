@@ -6,241 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="descripttion" content="เว็บไซต์สำหรับแนะนำการใช้งาน html css และ workshop">
     <title>Web Workshop : 684259032</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
         html {
             scroll-behavior: smooth;
         }
-
         body {
-            font-family: 'Sarabun', Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f3ff;
-            color: #2d1b6b;
-            line-height: 1.7;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 30px;
+            padding: 10px;
+            background-color: #ffffe0;
+
+            line-height: 1.5;
         }
 
-        /* ── wrapper ── */
-        .page {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 36px 32px 60px;
-        }
-
-        /* ── h1 (ชื่อหน้า) ── */
         h1 {
-            font-size: 30px;
-            font-weight: 700;
-            color: #6d28d9;
-            margin-bottom: 6px;
+            color: rgb(232, 43, 203);
         }
 
-        h1 span {
-            color: #a21caf;
-        }
-
-        /* ── intro paragraph ── */
-        .intro {
-            color: #6b7280;
-            font-size: 15px;
-            margin-bottom: 24px;
-        }
-
-        /* ── "Topics" label ── */
-        h2.topics-label {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            color: #7c3aed;
-            margin-bottom: 10px;
-        }
-
-        /* ── topic list ── */
-        ul.topic-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 28px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 8px;
-        }
-
-        ul.topic-list li a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 14px;
-            background: #fff;
-            border: 1px solid #ddd6fe;
-            border-radius: 8px;
-            font-size: 13.5px;
-            font-weight: 500;
-            color: #4c1d95;
-            text-decoration: none;
-            transition: background .13s, border-color .13s, color .13s;
-        }
-
-        ul.topic-list li a::before {
-            content: '›';
-            color: #a78bfa;
-            font-size: 16px;
-            line-height: 1;
-        }
-
-        ul.topic-list li a:hover {
-            background: #ede9fe;
-            border-color: #a78bfa;
-            color: #6d28d9;
-            text-decoration: none;
-        }
-
-        /* ── divider ── */
-        hr {
-            border: none;
-            border-top: 2px solid #ddd6fe;
-            margin: 8px 0 32px;
-        }
-
-        /* ── section headings ── */
         h2 {
-            font-size: 19px;
-            font-weight: 700;
-            color: #6d28d9;
-            margin: 40px 0 10px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #ede9fe;
+            color: rgb(0, 0, 255);
         }
 
-        /* ── workshop links inline (next to h2) ── */
-        .ws-inline {
-            display: inline-flex;
-            gap: 6px;
-            margin-bottom: 8px;
+        .aqua-text {
+            color: rgba(31, 198, 198, 0.978);
         }
 
-        .ws-inline a {
-            font-size: 12px;
-            font-weight: 600;
-            padding: 2px 12px;
-            border-radius: 999px;
-            background: #ede9fe;
-            border: 1px solid #c4b5fd;
-            color: #6d28d9;
-            text-decoration: none;
-            transition: background .12s;
-        }
-
-        .ws-inline a:hover {
-            background: #ddd6fe;
-            text-decoration: none;
-            color: #4c1d95;
-        }
-
-        /* ── paragraph under h2 ── */
-        p {
-            color: #4b5563;
-            font-size: 14.5px;
-            margin: 6px 0 10px;
-        }
-
-        /* ── code / pre ── */
         pre {
-            background-color: #1e1b4b;
-            color: #c4b5fd;
-            border-left: 4px solid #7c3aed;
-            padding: 16px 18px;
-            font-family: 'Fira Code', monospace;
-            font-size: 13px;
+            background-color: rgba(149, 232, 210, 0.645);
+            border-left: 3px solid rgb(133, 133, 253);
+            padding: 10px;
+            font-size: 18px;
+
+
             white-space: pre-wrap;
             border-radius: 10px;
-            line-height: 1.8;
-            margin-bottom: 10px;
         }
-
-        /* ── back to top ── */
-        a.back-top {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 12.5px;
-            color: #9ca3af;
+        a {
             text-decoration: none;
-            transition: color .12s;
+            color:rgb(0, 0, 0)
         }
 
-        a.back-top::before { content: '↑ '; }
-
-        a.back-top:hover {
-            color: #7c3aed;
-            text-decoration: none;
+        a:hover {
+            text-decoration: underline;
+            color: rgb(243, 141, 39)
         }
 
-        /* ── workshop ul (bottom section) ── */
-        ul.ws-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 8px 0 10px;
-        }
-
-        ul.ws-list li a {
-            display: block;
-            padding: 10px 20px;
-            background: #ede9fe;
-            border: 1px solid #c4b5fd;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #6d28d9;
-            text-decoration: none;
-            transition: background .12s;
-        }
-
-        ul.ws-list li a:hover {
-            background: #ddd6fe;
-            text-decoration: none;
-            color: #4c1d95;
-        }
-
-        /* ── footer ── */
         .text-center {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd6fe;
-            font-size: 13px;
-            color: #9ca3af;
-        }
-
-        .text-center a {
-            color: #7c3aed;
-            font-weight: 500;
-        }
-
-        .text-center a:hover {
-            text-decoration: underline;
-            color: #6d28d9;
-        }
-
-        @media (max-width: 600px) {
-            .page { padding: 20px 16px 40px; }
-            ul.topic-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 
 <body>
-<div class="page">
-
-    <h1 id="top">HTML <span>Tutorial</span></h1>
-    <p class="intro">Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
-
-    <h2 class="topics-label">Topics</h2>
-    <ul class="topic-list">
+    <h1 id="top">HTML Tutorial</h1>
+    <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
+    <h2 style="color: rgb(132, 0, 255);">Topics</h2>
+    <ul>
         <li><a href="#Intoduction">Introduction to HTML</a></li>
         <li><a href="#HTML Document Structure">HTML Document Structure</a></li>
         <li><a href="#Heading">Heading</a></li>
@@ -254,11 +75,10 @@
         <li><a href="#Semantic HTML">Semantic HTML</a></li>
         <li><a href="#Workshop">Workshop</a></li>
     </ul>
-
     <hr>
 
     <!-- Intoduction to HTML -->
-    <h2 id="Intoduction">Introduction to HTML</h2>
+    <h2 id="Intoduction" color: rgb(132, 0, 255);>Intoduction to HTML</h2>
     <pre>
     - HTML stands for Hyper Text Markup Language
     - HTML is the standard markup language for creating Web pages
@@ -270,11 +90,12 @@
     - Browsers do not display the HTML tags, but use them to render the content of the page
     - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
     - HTML is not a programming language, but a markup language</pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- HTML Document Structure -->
-    <h2 id="HTML Document Structure">HTML Document Structure</h2>
+    <h2 id="HTML Document Structure" color: rgb(132, 0, 255);>HTML Document Structure</h2>
     <p>AN HTML DOCUMENT HAS THE FOLLOWING BASIC STRUCTURE...</p>
     <pre>
     คำอธิบาย:
@@ -291,15 +112,14 @@
     ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
     &lt;img src="image.jpg" alt="A description of the image"&gt;
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Heading -->
-    <h2 id="Heading">Heading</h2>
-    <div class="ws-inline">
-        <a href="W03-01-heading.html">workshop 01</a>
-        <a href="W03-02-heading-51.html">workshop 02</a>
-    </div>
+    <h2 id="Heading" color: rgb(132, 0, 255);>Heading</h2>
+    <a href="W03-01-heading.html">workshop 01</a>
+    <a href="W03-02-heading-51.html"> | workshop 02</a>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
     <pre>
         - &lt;h1&gt;: Heading 1
@@ -309,24 +129,24 @@
         - &lt;h5&gt;: Heading 5
         - &lt;h6&gt;: Heading 6
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Paragraph -->
-    <h2 id="Paragraph">Paragraph</h2>
+    <h2 id="Paragraph" color: rgb(132, 0, 255);>Paragraph</h2>
     <p>work shop</p>
     <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
     <pre>
     - &lt;p&gt;: Paragraph
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Text Formatting -->
-    <h2 id="Text Formatting">Text Formatting</h2>
-    <div class="ws-inline">
-        <a href="W04-01-formatting.html">workshop</a>
-    </div>
+    <h2 id="Text Formatting" color: rgb(132, 0, 255);>Text Formatting</h2>
+    <p>workshop</p>
     <p>HTML provides various elements to format text...</p>
     <pre>
     - &lt;h1&gt; to &lt;h6&gt;: Headings
@@ -351,12 +171,13 @@
     - &lt;q&gt;: Inline quotation
     - &lt;code&gt;: Code snippet
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Creating Links -->
-    <h2 id="Creating Links">Creating Links</h2>
-    <div class="ws-inline"><a href="W06-01-link_image.html">workshop</a></div>
+    <h2 id="Creating Links" color: rgb(132, 0, 255);>Creating Links</h2>
+    <p>workshop</p>
     <p>HTML links are defined with the &lt;a&gt; tag...</p>
     <pre>
         - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
@@ -379,11 +200,12 @@
         - Use the download attribute to create a download link
         - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Lists (Ordered and Unordered) -->
-    <h2 id="Lists (Ordered and Unordered)">Lists (Ordered and Unordered)</h2>
+    <h2 id="Lists (Ordered and Unordered)" color: rgb(132, 0, 255);>Lists (Ordered and Unordered)</h2>
     <p>workshop</p>
     <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
     <pre>
@@ -426,13 +248,15 @@
     - Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
     - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
     - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
+
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Adding Images -->
-    <h2 id="Adding Images">Adding Images</h2>
-    <div class="ws-inline"><a href="W06-01-link_image.html">workshop</a></div>
+    <h2 id="Adding Images" color: rgb(132, 0, 255);>Adding Images</h2>
+    <p>workshop</p>
     <p>HTML images are defined with the &lt;img&gt; tag...</p>
     <pre>
     - &lt;img src="url" alt="description"&gt;
@@ -474,11 +298,12 @@
     object-fit: cover;
     }
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Creating Tables -->
-    <h2 id="Creating Tables">Creating Tables</h2>
+    <h2 id="Creating Tables" color: rgb(132, 0, 255);>Creating Tables</h2>
     <p>Workshop 1</p>
     <p>Workshop 2</p>
     <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
@@ -488,11 +313,12 @@
     - &lt;th&gt;: Table header
     - &lt;td&gt;: Table data/cell
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- HTML Forms -->
-    <h2 id="HTML Forms">HTML Forms</h2>
+    <h2 id="HTML Forms" color: rgb(132, 0, 255);>HTML Forms</h2>
     <p>HTML forms are defined with the &lt;form&gt; tag...</p>
     <pre>
     หัวข ้อเกี่ยวกับฟอร์ม
@@ -526,11 +352,12 @@
     - การสง่ ขอ้มลู ไปยังเซริฟ์ เวอร์
     - การใช ้JavaScript (เชน่ onsubmit)
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Semantic HTML -->
-    <h2 id="Semantic HTML">Semantic HTML</h2>
+    <h2 id="Semantic HTML" color: rgb(132, 0, 255);>Semantic HTML</h2>
     <p>Semantic HTML elements clearly define the content of a web page...</p>
     <pre>
     - &lt;header&gt;: Defines a header for a document or section
@@ -539,24 +366,29 @@
     - &lt;article&gt;: Defines an article
     - &lt;aside&gt;: Defines content aside from the page content
     - &lt;footer&gt;: Defines a footer for a document or section
+
     </pre>
-    <a class="back-top" href="#top">back to top</a>
+
+    <a href="#top">back to top</a>
 
 
     <!-- Workshop -->
-    <h2 id="Workshop">Workshop</h2>
-    <ul class="ws-list">
-        <li><a href="">workshop 01 : ...</a></li>
-        <li><a href="">workshop 02 : ...</a></li>
-    </ul>
-    <a class="back-top" href="#top">back to top</a>
+    <h2 id="Workshop" color: rgb(132, 0, 255);>Workshop</h2>
+    
+        <ul>
+            <li><a href="">workshop 01 : ...</a></li>
+            <li><a href="">workshop 02 : ...</a></li>
+        </ul>
+    
+
+    <a href="#top">back to top</a>
 
     <hr>
     <div class="text-center">
         <a href="https://www.w3schools.com/">Learn more about HTML</a>
-        <p>&copy; 2026 HTML Tutorial by Sittichok Samsee</p>
+        <p> &copy; 2026 HTML Tutorial by Sittichok Samsee</p>
     </div>
 
-</div>
 </body>
+
 </html>
