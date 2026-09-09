@@ -112,6 +112,10 @@ nav a.active {
                 Main
 ======================================*/ 
 
+.container {
+    margin-bottom: 3rem;
+}
+
 .page-title {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -156,6 +160,90 @@ nav a.active {
 .breed {
     color: var(--mute-text-color);
 }
+
+/*==================================
+            Advice-container
+=====================================*/
+
+.advice-container {
+    border-radius: 0.75rem;
+    max-width: 1280px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: var(--header-shadow);
+}
+
+.advice-title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding-top: 1.7rem;
+}
+
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+    margin: 2rem;
+    padding-bottom: 2rem;
+}
+
+.advice-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: #333333;
+}
+
+.advice-card h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #050505; 
+  font-weight: 600;
+}
+
+.advice-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #696363;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------
+   กำหนดสีพื้นหลังการ์ด และ สีของหัวข้อ (h3)
+   --------------------------------------------------- */
+
+/* 1. การ์ดใบแรก - สีฟ้า */
+.advice-grid .advice-card:nth-child(1) {
+    background-color: #e2edfb; 
+}
+.advice-grid .advice-card:nth-child(1) h3 {
+    color: #2e5481; /* สีฟ้าเข้ม */
+}
+
+/* 2. การ์ดใบที่สอง - สีม่วง */
+.advice-grid .advice-card:nth-child(2) {
+    background-color: #f3e8fa; 
+}
+.advice-grid .advice-card:nth-child(2) h3 {
+    color: #5d3b75; /* สีม่วงเข้ม */
+}
+
+/* 3. การ์ดใบที่สาม - สีเขียว */
+.advice-grid .advice-card:nth-child(3) {
+    background-color: #def8e9; 
+}
+.advice-grid .advice-card:nth-child(3) h3 {
+    color: #256643; /* สีเขียวเข้ม */
+}
+
+/* 4. การ์ดใบที่สี่ - สีส้มพีช */
+.advice-grid .advice-card:nth-child(4) {
+    background-color: #faebd6; 
+}
+.advice-grid .advice-card:nth-child(4) h3 {
+    color: #8c5a2b; /* สีน้ำตาล/ส้มเข้ม */
+}
+
 
 /*===================================
                 Footer
